@@ -1,7 +1,8 @@
-export const app = express();
+import express from "express";
 import path from "path";
 import { createServer as createViteServer } from "vite";
 import dotenv from "dotenv";
+
 import { GoogleGenAI } from "@google/genai";
 import {
   loadDatabase,
@@ -17,7 +18,7 @@ import {
 } from "./src/server/db.ts";
 
 dotenv.config();
-
+export const app = express();
 
 const PORT = 3000;
 
